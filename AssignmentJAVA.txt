@@ -1,0 +1,141 @@
+Assignment #1 : Accept a numeric array datafor 5 numbersandfind the largest number.
+package Assignment;
+
+import java.util.Scanner;
+
+public class Assignment1 {
+
+	public static void main(String[] args) {
+		
+		int n, max;
+		Scanner s = new Scanner(System.in);
+		System.out.println("Enter the elements of array:");
+		n = s.nextInt();
+		int a[] = new int[n];
+		for (int i = 0; i < 4; i++) {
+			a[i] = s.nextInt();
+		}
+
+		max = a[0];
+
+		for (int i = 0; i < n; i++) {
+			if (max < a[i]) {
+				max = a[i];
+			}
+		}
+
+		System.out.println("Largest value in the array is:" + max);
+	}
+
+}
+--------------------------------------------------------------------------------------
+Assignment#2  : Create methods to find the cube and square of a given number.
+package Assignment;
+
+import java.util.Scanner;
+
+public class Assignment2 {
+
+	public static void main(String[] args) {
+		  Scanner sc = new Scanner(System.in);
+          int num;
+
+          System.out.print("Enter an integer number: ");
+          num = sc.nextInt();
+
+          System.out.println("Square of " + num + " is: " + Math.pow(num, 2));
+          System.out.println("Cube of " + num + " is: " + Math.pow(num, 3));
+
+  }
+
+}
+---------------------------------------------------------------------------------------------
+Assignment #3: Create a method to swap two numbers (swap means interchange)
+package Assignment;
+
+public class Assignment3 {
+
+	 public static void SwapNumber(int num1, int num2) {
+		 int x = num1;
+	        int y = num2;
+	        int temp = 0;
+	        System.out.println("Before Swap");
+
+	        System.out.println("the value of X is: " + x);
+
+	        System.out.println("the value of Y is: " + y);
+
+	        System.out.println("After Swap");
+
+	        temp = x;
+	        x = y;
+	        y = temp;
+
+	        System.out.println("the value of X is: " + x);
+
+	        System.out.println("the value of Y is: " + y);
+
+	    }
+
+	    public static void main(String[] args) {
+
+	        int x = 5;
+	        int y = 6;
+
+	        SwapNumber(x, y);
+
+	    }
+
+	}
+----------------------------------------------------------------------------------------------
+Assignment#4 : Write the switch case construct perform the calculations.
+package Assignment;
+
+import java.util.Scanner;
+
+public class Assignment4 {
+
+	public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+
+        while (true) {
+        	
+        	System.out.print("What operation? (+,-,*,/) or (E if EXIT)");
+            char operation = sc.next().charAt(0);
+
+            System.out.print("Enter first number:");
+            int num1 = sc.nextInt();
+            System.out.print("Enter second number:");
+            int num2 = sc.nextInt();
+           
+            switch (operation) {
+
+            case '+':
+                System.out.println("Add two numbers;");
+                int sum = num1 + num2;
+                System.out.println("The sum of two number: "+ sum);
+                break;
+            case '-':
+                System.out.println("Subtract two numbers;");
+                int diff = num1 - num2;
+                System.out.println("The difference of two number: "+ diff);
+                break;
+            case '*':
+                System.out.println("Multiply two numbers;");
+                int product = num1 * num2;
+                System.out.println("The product of two number: "+ product);
+                break;
+            case '/':
+                System.out.println("Divide two numbers;");
+                int quotient = num1 / num2;
+                System.out.println("The quotient of two number: "+ quotient);
+                break;
+            case 'E':
+                System.out.println("THANKS");
+                System.exit(0);
+            }
+        }
+    }
+}
